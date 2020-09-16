@@ -1,4 +1,4 @@
-I tried to add "Enter to Input" as:
+1) I tried to add "Enter to Input" as:
 `document.getElementById("number")
 .addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -7,4 +7,6 @@ I tried to add "Enter to Input" as:
     }
 });` , but I kept getting the error `script.js:20 Uncaught TypeError: Cannot read property 'addEventListener' of null"`
 
-Wonder what is problem over there...
+2) I failed to refresh the canvas every time when inputting a new number...
+
+Wonder what are problems over there...

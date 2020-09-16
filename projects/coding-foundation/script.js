@@ -16,10 +16,10 @@ function changeShapeNum(){
 }
 
 //Cannot figure out the "enter" key input
-document.getElementById("number")
-.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("myButton").click();
-    }
-});
+// document.getElementById("number")
+// .addEventListener("keyup", function(event) {
+//     event.preventDefault();
+//     if (event.keyCode === 13) {
+//         document.getElementById("myButton").click();
+//     }
+// });

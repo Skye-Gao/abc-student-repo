@@ -4,8 +4,19 @@ body {
 
 .enter{
   text-align: center;
+  margin-top: 100px;
 }
 
-#number{
+#container {
+	/* display: flex; */
+  margin:30px;
+}
 
+.shape {
+   /* border-radius: 50%; */
+  height: 20px;
+  width: 20px;
+  opacity: 1;
+  margin:15px;
+  display: inline-block;
 }

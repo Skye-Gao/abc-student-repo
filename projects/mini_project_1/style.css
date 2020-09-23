@@ -1,0 +1,58 @@
+body {
+  background: whitesmoke;
+}
+
+.container {
+  /*centers in the container*/
+  text-align: center;
+}
+
+div.circTxt {
+  /*allows for centering*/
+  display: inline-block;
+  /*adjust as needed*/
+  margin-bottom: 128px;
+  color: #333;
+  position:relative;
+}
+
+#shadow {
+  font-size:28px;
+  font-weight:bold;
+  text-shadow:0 4px 8px #666, 0 6px 16px #999;
+  background: red;
+}
+
+#cursive {
+  font-family:homemade apple, cursive;
+  top:32px;
+  left:-150px;
+}
+
+#blue {
+  color:blue;
+  font-family:tahoma;
+  font-weight:bold;
+  top:50px;
+  left: 150px;
+}
+#blue p {
+  border:1px solid blue;
+}
+
+#green {
+  color:lime;
+  font-size:32px;
+  font-weight:bold;
+  text-shadow:1px 1px 0 black, -1px -1px 0 black;
+  top:40px;
+  left:-150px;
+}
+
+#spokes {
+  top:-64px;
+  left:118px;
+}
+#spokes p {
+  border:1px solid red;
+}

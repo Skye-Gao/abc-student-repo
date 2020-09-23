@@ -1,0 +1,84 @@
+body{
+  background-color: black;
+}
+
+.intro {
+  width:60%;
+  height: 100%;
+  /* margin:auto;
+  text-align: center; */
+  float: left;
+  margin-left: 50px;
+  padding: 20px 0;
+}
+.poem{
+  /* margin:10px; */
+  font-family: Optima, sans-serif;
+  font-size: 250%;
+  height:10%;
+}
+
+.links {
+  width:25%;
+  height: 100%;
+  /* margin:auto;
+  text-align: center; */
+  float: right;
+  margin-right: 50px;
+  padding: 20px 0;
+}
+
+.link{
+  /* margin:10px; */
+  text-align: right;
+  font-family: Optima, sans-serif;
+  font-size: 250%;
+  height:10%;
+}
+
+hr.right{
+  margin: 0.2em;
+  border-top: 1px solid grey;
+  opacity: 50%;
+}
+
+hr.left{
+  margin: 0.2em;
+  border-top: 1px solid grey;
+  opacity: 0%;
+}
+
+img {position: absolute;}
+
+#a,#b,#c,#d,#e,#f,#g,#h,#i,#j{
+  display: block;
+}
+
+#one:hover+#all{
+  display: block;
+  background-color: white;
+}
+
+a.active:link {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  color: white;
+  text-decoration: none;
+}
+
+a.active:hover {
+  color: hotpink;
+}
+
+a.not-active{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: white;
+}
+
+#shark{
+  display: none;
+  height:150px;
+}

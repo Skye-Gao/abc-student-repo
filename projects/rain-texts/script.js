@@ -15,7 +15,6 @@ content.innerHTML=spanString;
 let spanTags=document.getElementsByTagName("span");
 console.log(spanTags);
 
-
 range.addEventListener("input",()=>{
   let value=range.value;
   for (let i=0;i<spanTags.length;i++){

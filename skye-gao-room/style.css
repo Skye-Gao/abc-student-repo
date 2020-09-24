@@ -52,12 +52,12 @@ hr.left{
 img {position: absolute;}
 
 #a,#b,#c,#d,#e,#f,#g,#h,#i,#j{
-  display: block;
+  /* display: none; */
 }
 
-#one:hover+#all{
+#one:hover #a{
   display: block;
-  background-color: white;
+  /* color: white; */
 }
 
 a.active:link {
@@ -77,6 +77,7 @@ a.not-active{
   cursor: default;
   text-decoration: none;
   color: white;
+
 }
 
 #shark{

@@ -5,6 +5,7 @@ body {
 .container {
   /*centers in the container*/
   text-align: center;
+
 }
 
 div.circTxt {
@@ -14,27 +15,42 @@ div.circTxt {
   margin-bottom: 128px;
   color: #333;
   position:relative;
+  text-align: center;
+
+  transform:rotate(7deg);
+  -ms-transform:rotate(7deg);
+  -webkit-transform:rotate(7deg);
 }
 
 #shadow {
+  /* font-family:tahoma; */
+  width: 10px;
+  /* height:100px; */
+  /* background-color:yellow; */
+
+  height:550px;
   font-size:28px;
   font-weight:bold;
-  text-shadow:0 4px 8px #666, 0 6px 16px #999;
-  background: red;
+  /* text-shadow:0 4px 8px #666, 0 6px 16px #999; */
 }
 
 #cursive {
-  font-family:homemade apple, cursive;
-  top:32px;
-  left:-150px;
+  /* font-family:homemade apple, cursive; */
+  width: 10px;
+  height:230px;
+  font-size:15px;
+  font-weight:bold;
+  /* background-color:yellow; */
+  top:-160px;
+  left:-15px;
 }
 
-#blue {
+#still {
   color:blue;
   font-family:tahoma;
   font-weight:bold;
-  top:50px;
-  left: 150px;
+  top:-150px;
+  left: -300px;
 }
 #blue p {
   border:1px solid blue;

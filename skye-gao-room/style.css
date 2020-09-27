@@ -52,10 +52,10 @@ hr.left{
 img {position: absolute;}
 
 #a,#b,#c,#d,#e,#f,#g,#h,#i,#j{
-  /* display: none; */
+  display: none;
 }
 
-#one:hover #a{
+a.active:hover  #a{
   display: block;
   /* color: white; */
 }

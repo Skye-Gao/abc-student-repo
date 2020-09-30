@@ -1,0 +1,37 @@
+body {
+  animation: mymove 30s;
+  background-color: black;
+  animation-iteration-count: 1;
+}
+
+@keyframes mymove {
+  from {background-color: whitesmoke;}
+  to {background-color: black;}
+}
+
+.text{
+  margin: auto;
+}
+
+#buttonOne,#buttonTwo,#buttonThree{
+  position: relative;
+}
+
+#intro{
+  font-size:28px;
+  margin: 5px;
+  padding:5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+   color:white;
+   /* background-color: black; */
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#comment{
+  display: none;
+  margin-top: 70px;
+  position: relative;
+  text-align:center;
+}

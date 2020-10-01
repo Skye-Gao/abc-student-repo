@@ -17,4 +17,4 @@ function displayImage(){
   document.getElementById("image").src = "images/"+imagesArray[num];
 }
 
-window.onload =displayImage;
+displayImage();

@@ -3,6 +3,7 @@ var imagesArray = ["car.jpg", "drive.jpg", "drive2.jpg", "emergency_room.jpeg", 
 var usedImages = [];
 
 function displayImage(){
+  console.log("show images")
   var num = Math.floor(Math.random() * (imagesArray.length));
 
   var thisImage = imagesArray[num];

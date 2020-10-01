@@ -14,6 +14,8 @@ function displayImage(){
   }
 
   document.getElementById("image").src = "images/"+imagesArray[num];
+  console.log("show images");
+  
 }
 
-window.onload =displayImage;
+displayImage();

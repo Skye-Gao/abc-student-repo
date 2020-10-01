@@ -9,12 +9,22 @@ body {
   to {background-color: black;}
 }
 
-.text{
+#intro{
+  z-index: -3;
   margin: auto;
+  animation: textColor 30s;
+  animation-iteration-count: 1;
 }
+
+@keyframes textColor {
+  from {color: black;}
+  to {color: whitesmoke;}
+}
+
 
 #buttonOne,#buttonTwo,#buttonThree{
   position: relative;
+  z-index: 3;
 }
 
 #intro{
@@ -29,6 +39,7 @@ body {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 #comment{
   display: none;
   margin-top: 70px;

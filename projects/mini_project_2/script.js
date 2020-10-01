@@ -33,7 +33,7 @@ function openWindowOne(){
     //what we want to happen after setTimeout
     document.getElementById('buttonOne').style.display='none';
     newWindow.close();
-  }, 5000);
+  }, 8000);
 };
 
 function openWindowTwo(){
@@ -48,7 +48,7 @@ function openWindowTwo(){
     //what we want to happen after setTimeout
     document.getElementById('buttonTwo').style.display='none';
     newWindow.close();
-  }, 5000);
+  }, 8000);
 };
 
 function openWindowThree(){
@@ -60,7 +60,6 @@ function openWindowThree(){
   setTimeout(function(){
     //what we want to happen after setTimeout
     document.getElementById('buttonThree').style.display='none';
-    document.getElementById('comment').style.display='none';
     newWindow.close();
   }, 8000);
 };
@@ -69,18 +68,23 @@ function openManyWindowsOne(){
   for(let i=0;i<5;i++){
     openWindowOne();
   }
+  document.getElementById('buttonTwo').style.display='block';
+  document.getElementById('buttonOne').style.display='none';
 }
 
 function openManyWindowsTwo(){
   for(let i=0;i<5;i++){
     openWindowTwo();
   }
+  document.getElementById('buttonThree').style.display='block';
+  document.getElementById('buttonTwo').style.display='none';
 }
 
 function openManyWindowsThree(){
   for(let i=0;i<5;i++){
     openWindowThree();
   }
+  document.getElementById('buttonThree').style.display='none';
   document.getElementById('comment').style.display='block';
 }
 
@@ -90,6 +94,7 @@ setTimeout(function(){
   document.getElementById('buttonOne').style.display='none';
   document.getElementById('buttonTwo').style.display='none';
   document.getElementById('buttonThree').style.display='none';
+  document.getElementById('comment').style.display='none';
 }, 31000);
 
 buttonOne.addEventListener("click",openManyWindowsOne)

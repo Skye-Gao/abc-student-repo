@@ -26,6 +26,9 @@ body {
   position: relative;
   z-index: 3;
 }
+#buttonTwo,#buttonThree{
+  display: none;
+}
 
 #intro{
   font-size:28px;

@@ -13,11 +13,11 @@ console.log(w);
 console.log(h);
 
 buttonOne.style.top = 100+Math.floor((Math.random() * (h-400)) + 1) + "px";
-buttonOne.style.left = 400+Math.floor((Math.random() * (w-400)) + 1) + "px";
+buttonOne.style.left = 200+Math.floor((Math.random() * (w-1000)) + 1) + "px";
 buttonTwo.style.top = 100+Math.floor((Math.random() * (h-400)) + 1) + "px";
-buttonTwo.style.left = 400+Math.floor((Math.random() * (w-400)) + 1) + "px";
+buttonTwo.style.left = 400+Math.floor((Math.random() * (w-500)) + 1) + "px";
 buttonThree.style.top = 100+Math.floor((Math.random() * (h-400)) + 1) + "px";
-buttonThree.style.left = 400+Math.floor((Math.random() * (w-400)) + 1) + "px";
+buttonThree.style.left = 600+Math.floor((Math.random() * (w-800)) + 1) + "px";
 
 function openWindowOne(){
   console.log("now a window should open");

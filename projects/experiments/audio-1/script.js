@@ -6,7 +6,7 @@ console.log(context);
 
 let oscillator=context.createOscillator();
 oscillator.type="triangle";
-oscillator.frequency.value=440;
+oscillator.frequency.value=340;
 
 let gain=context.createGain();
 
@@ -27,3 +27,5 @@ off.addEventListener("click",()=>{
   // oscillator.stop(0);
   gain.gain.value=0;
 })
+
+console.log(oscillatorStarted);

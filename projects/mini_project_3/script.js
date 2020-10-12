@@ -108,16 +108,25 @@ let checkedC=document.getElementById("checkedC");
 let checkedD=document.getElementById("checkedD");
 
 //slider animation
-// function sliderAnimate(){
-//   let slide=setInterval(function(){
-//      range.value+=1;
-//    }, 1000);
-//
-//    if (range.value==100){
-//      clearInterval(slide);
-//    }
-//   console.log(range.value);
-// }
+function sliderAnimate(){
+  // setInterval(function(){
+  //   document.getElementById("rangeTwo").value="0";
+  // },500)
+  console.log("animat")
+  let slide=setInterval(function(){
+    range.value = 1+ Number(range.value)*1.8;
+    console.log(range.value);
+
+    if (range.value>=100){
+      clearInterval(slide);
+
+    }
+
+  }, 100);
+  //
+
+
+}
 
 var buttonText = [
   "Hello",
@@ -151,15 +160,17 @@ lineUp.addEventListener("click",()=>{
 
 //each checkbox change
 checkD.addEventListener("click",()=>{
+  console.log("hello")
   checkD.style.display="none";
   checkC.checked=false;
   document.getElementById("rangeTwo").value="0";
   range.addEventListener("input",()=>{
     if(range.value==100){
       checkedA.style.visibility="visible";
+
     }
   })
-  sliderAnimate();
+
 })
 
 checkC.addEventListener("click",()=>{
@@ -171,6 +182,7 @@ checkC.addEventListener("click",()=>{
       checkedB.style.visibility="visible";
     }
   })
+  sliderAnimate();
 })
 
 checkB.addEventListener("click",()=>{
@@ -182,6 +194,7 @@ checkB.addEventListener("click",()=>{
       checkedC.style.visibility="visible";
     }
   })
+  sliderAnimate();
 })
 
 checkA.addEventListener("click",()=>{
@@ -192,12 +205,13 @@ checkA.addEventListener("click",()=>{
       checkedD.style.visibility="visible";
     }
   })
+  sliderAnimate();
 })
 
 // range.addEventListener("input",()=>{
 //   let value=range.value;
-//   console.log(value);
-//   if(value==100){
-//     document.getElementById("B").style.display='block';
-//   }
+//   console.log(Number(value));
+//   // if(value==100){
+//   //   document.getElementById("B").style.display='block';
+//   // }
 // })

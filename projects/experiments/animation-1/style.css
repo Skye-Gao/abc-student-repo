@@ -8,10 +8,11 @@ body{
   margin: 10px;
 }
 
-.box-1{
-  animation-name: spin;
+#box-1{
+  animation:spin 2s infinite;
+  /* animation-name: spin ;
   animation-duration: 2s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: infinite; */
   animation-timing-function: linear;
   /* animation-fill-mode: backwards; */
 }

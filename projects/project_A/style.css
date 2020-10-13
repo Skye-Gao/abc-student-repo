@@ -1,12 +1,16 @@
+body{
+  margin:0;
+}
 #scrollLength{
   width:50%;
-  border: black 1px solid;
+  /* border: black 1px solid; */
   height: 700vh;
 }
 #background{
-  width:100%;
+  margin-left:30vh;
+  width:50%;
   height:700vh;
-  border: red 5px solid;
+  /* border: red 5px solid; */
   box-sizing: border-box;
   position: fixed;
   top:0;
@@ -16,18 +20,49 @@
 }
 
 /* .bubble{
-  width:10px;
-  height:400vh;
-  border: black 4px dashed;
-  display: inline-block;
-  position: relative;
+width:10px;
+height:400vh;
+border: black 4px dashed;
+display: inline-block;
+position: relative;
 } */
 
 .imgWrapper{
-  width: 100px;
+  width:50px;
   height: 10vh;
-  border: black 4px dashed;
+  /* border: black 4px dashed; */
   position: relative;
   /* display: inline-block; */
 
+}
+.imgWrapper img{
+  width:50px;
+}
+
+#percentage{
+  display: none;
+  position: fixed;
+  top:100px;
+  right:100px;
+  text-align: right;
+}
+
+#title{
+  position: fixed;
+  top:190px;
+  right:-320px;
+  text-align: right;
+  transform: rotate(-90deg);
+  font-size: 35px;
+  font-weight: bold;
+  font-family:"Arial Black", Gadget, sans-serif;
+}
+#intro{
+  position: fixed;
+  top:260px;
+  right:-150px;
+  text-align: right;
+  transform: rotate(90deg);
+  font-family:Arial, Helvetica, sans-serif;
+  z-index: 3;
 }

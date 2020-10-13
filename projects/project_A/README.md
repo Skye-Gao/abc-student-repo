@@ -4,7 +4,7 @@ Link to my website:(https://skye-gao.github.io/abc-student-repo/projects/coding-
 Reference-style:
 ![alt text][demo]
 
-[demo]: https://github.com/Skye-Gao/abc-student-repo/master/projects/project_A/images/demo.gif "Logo Title Text 2"
+[demo]: https://raw.githubusercontent.com/Skye-Gao/abc-student-repo/master/projects/project_A/images/demo.gif "Logo Title Text 2"
 
 Added a little fun. Plz Enjoy :)
 

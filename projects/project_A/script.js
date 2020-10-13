@@ -4,9 +4,10 @@ let originalPos=50;
 let eachImageHeight=700;
 let adjust3=-20;
 
+//set properties for each img
 let planning = [
   {
-    // source1: "images/img00.jpg",
+    // source1
     slides: [
       0+originalPos,     // 0%
       -2*eachImageHeight+originalPos,  // 33%
@@ -20,11 +21,11 @@ let planning = [
     ]
   },
   {
-    // source2: "images/img01.jpg",
+    // source2
     slides: [
       -3*eachImageHeight+originalPos,     // 0%
-      0+originalPos,  // 33%
-      -eachImageHeight+originalPos,  // 66%
+      0+originalPos,
+      -eachImageHeight+originalPos,
       -4*eachImageHeight+originalPos,
       -8*eachImageHeight+originalPos,
       -5*eachImageHeight+originalPos,
@@ -35,11 +36,11 @@ let planning = [
   },
 
   {
-    // source3: "images/img01.jpg",
+    // source3
     slides: [
       -eachImageHeight+originalPos,     // 0%
-      -3*eachImageHeight+originalPos,  // 33%
-      -5*eachImageHeight+originalPos,  // 66%
+      -3*eachImageHeight+originalPos,
+      -5*eachImageHeight+originalPos,
       -2*eachImageHeight+originalPos,
       0+originalPos,
       -4*eachImageHeight+originalPos,
@@ -49,11 +50,11 @@ let planning = [
     ]
   },
   {
-    // source4: "images/img00.jpg",
+    // source4
     slides: [
       -2*eachImageHeight+originalPos+adjust3,     // 0%
-      -4*eachImageHeight+originalPos+adjust3,  // 33%
-      -3*eachImageHeight+originalPos+adjust3,  // 66%
+      -4*eachImageHeight+originalPos+adjust3,
+      -3*eachImageHeight+originalPos+adjust3,
       -6*eachImageHeight+originalPos+adjust3,
       -eachImageHeight+originalPos+adjust3,
       -7*eachImageHeight+originalPos+adjust3,
@@ -63,11 +64,11 @@ let planning = [
     ]
   },
   {
-    // source5: "images/img01.jpg",
+    // source5
     slides: [
       0+originalPos,     // 0%
-      -eachImageHeight+originalPos,  // 33%
-      -2*eachImageHeight+originalPos,  // 66%
+      -eachImageHeight+originalPos,
+      -2*eachImageHeight+originalPos,
       -3*eachImageHeight+originalPos,
       -4*eachImageHeight+originalPos,
       -5*eachImageHeight+originalPos,
@@ -77,11 +78,11 @@ let planning = [
     ]
   },
   {
-    // source6: "images/img01.jpg",
+    // source6
     slides: [
       -4*eachImageHeight+originalPos-180,     // 0%
-      -6*eachImageHeight+originalPos-180,  // 33%
-      -8*eachImageHeight+originalPos-180,  // 66%
+      -6*eachImageHeight+originalPos-180,
+      -8*eachImageHeight+originalPos-180,
       -5*eachImageHeight+originalPos-180,
       -7*eachImageHeight+originalPos-180,
       -2*eachImageHeight+originalPos-180,
@@ -91,11 +92,11 @@ let planning = [
     ]
   },
   {
-    // source7: "images/img00.jpg",
+    // source7
     slides: [
       -6*eachImageHeight+originalPos-265,     // 0%
-      -5*eachImageHeight+originalPos,  // 33%
-      0+originalPos,  // 66%
+      -5*eachImageHeight+originalPos,
+      0+originalPos,
       -7*eachImageHeight+originalPos,
       -3*eachImageHeight+originalPos,
       -eachImageHeight+originalPos,
@@ -105,11 +106,11 @@ let planning = [
     ]
   },
   {
-    // source8: "images/img01.jpg",
+    // source8
     slides: [
       -5*eachImageHeight+originalPos-220,     // 0%
-      -eachImageHeight+originalPos,  // 33%
-      -7*eachImageHeight+originalPos,  // 66%
+      -eachImageHeight+originalPos,
+      -7*eachImageHeight+originalPos,
       -8*eachImageHeight+originalPos,
       -6*eachImageHeight+originalPos,
       -3*eachImageHeight+originalPos,
@@ -119,11 +120,11 @@ let planning = [
     ]
   },
   {
-    // source9: "images/img01.jpg",
+    // source9
     slides: [
       -7*eachImageHeight+originalPos-310,     // 0%
-      -8*eachImageHeight+originalPos,  // 33%
-      -4*eachImageHeight+originalPos,  // 66%
+      -8*eachImageHeight+originalPos,
+      -4*eachImageHeight+originalPos,
       -6*eachImageHeight+originalPos,
       -2*eachImageHeight+originalPos,
       0+originalPos,
@@ -133,11 +134,11 @@ let planning = [
     ]
   },
   {
-    // source10: "images/img01.jpg",
+    // source10
     slides: [
       -8*eachImageHeight+originalPos-350,     // 0%
-      -7*eachImageHeight+originalPos,  // 33%
-      -6*eachImageHeight+originalPos,  // 66%
+      -7*eachImageHeight+originalPos,
+      -6*eachImageHeight+originalPos,
       -2*eachImageHeight+originalPos,
       -5*eachImageHeight+originalPos,
       -4*eachImageHeight+originalPos,
@@ -148,6 +149,8 @@ let planning = [
   },
 ]
 
+
+//create image div
 for(let i = 0; i < planning.length; i++){
   let imgWrapper = document.createElement("div");
   imgWrapper.className = "imgWrapper";
@@ -159,6 +162,7 @@ for(let i = 0; i < planning.length; i++){
   background.appendChild(imgWrapper);
 }
 
+//map position to scrolling position
 window.addEventListener('scroll', function(){ // on page scroll
   let scrolltop = window.pageYOffset;
   let windowHeight=window.innerHeight;
@@ -189,26 +193,6 @@ window.addEventListener('scroll', function(){ // on page scroll
     let position=map(percentageInCurrentStage,0,100,lowerEnd,upperEnd);
     imgs[i].style.top=position+"px";
   }
-  //
-  // for(let i = 0; i < imgs.length; i++){
-  //   let cursorStage1=planning[i].cursorStage1;
-  //   let cursorStage2=planning[i].cursorStage2;
-  //   let cursorStage3=planning[i].cursorStage3;
-  //   // console.log(planning[i].stage1);
-  //   console.log(cursorStage1, cursorStage2);
-  //   if (percent>=0&&percent<cursorStage1){
-  //     imgs[i].style.top = map(percent,0,cursorStage1,0,200)+"px";
-  //   }else if (percent>=cursorStage1 && percent<cursorStage2){
-  //     imgs[i].style.top = map(percent,cursorStage1,cursorStage2,200,0)+"px";
-  //   }else if(percent>=cursorStage2 && percent<cursorStage3){
-  //     imgs[i].style.top = map(percent,cursorStage2,cursorStage3,0,500)+"px";
-  //   }
-  //   // else{
-  //   //   imgs[1].style.top = w*percent+"px";
-  //   //   imgs[0].style.top = w*percent+"px";
-  //   // }
-  //
-  // }
 }, false)
 
 //-------------------------hard code examples in window.addEventListener---------------

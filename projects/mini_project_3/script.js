@@ -84,14 +84,15 @@ off.addEventListener("click", ()=>{
 volumeRange.addEventListener("input", ()=>{
   gain.gain.value = volumeInput.value/100;
 })
-frequencyRange.addEventListener("input", ()=>{
-  // sliderValue = frequencyRange.value;
-  // mappedHertz = map(sliderValue, 0, 100, minHz, maxHz);
-  // console.log("mapped hertz is", mappedHertz)
-  // oscillator.frequency.value = mappedHertz;
-  // or, shorter:
-  oscillator.frequency.value = map(frequencyRange.value, 100, 0, minHz, maxHz);
-})
+
+// frequencyRange.addEventListener("input", ()=>{
+//   // sliderValue = frequencyRange.value;
+//   // mappedHertz = map(sliderValue, 0, 100, minHz, maxHz);
+//   // console.log("mapped hertz is", mappedHertz)
+//   // oscillator.frequency.value = mappedHertz;
+//   // or, shorter:
+//   oscillator.frequency.value = map(frequencyRange.value, 100, 0, minHz, maxHz);
+// })
 
 //-----------------visual effect---------------------------
 let range=document.getElementById("rangeTwo");
@@ -108,18 +109,19 @@ let checkedC=document.getElementById("checkedC");
 let checkedD=document.getElementById("checkedD");
 
 //slider animation
-function sliderAnimate(){
+function sliderAnimate(after){
   // setInterval(function(){
   //   document.getElementById("rangeTwo").value="0";
   // },500)
   console.log("animat")
   let slide=setInterval(function(){
-    range.value = 1+ Number(range.value)*1.8;
+    range.value = 0.5+Number(range.value)*1.7;
     console.log(range.value);
-
+    oscillator.frequency.value = map(frequencyRange.value, 100, 0, minHz, maxHz);
     if (range.value>=100){
       clearInterval(slide);
-
+      after.style.visibility="visible";
+      // range.value="0";
     }
 
   }, 100);
@@ -164,48 +166,31 @@ checkD.addEventListener("click",()=>{
   checkD.style.display="none";
   checkC.checked=false;
   document.getElementById("rangeTwo").value="0";
-  range.addEventListener("input",()=>{
-    if(range.value==100){
-      checkedA.style.visibility="visible";
 
-    }
-  })
-
+  sliderAnimate(checkedA);
 })
 
 checkC.addEventListener("click",()=>{
   checkC.style.display="none";
   checkB.checked=false;
   document.getElementById("rangeTwo").value="0";
-  range.addEventListener("input",()=>{
-    if(range.value==100){
-      checkedB.style.visibility="visible";
-    }
-  })
-  sliderAnimate();
+
+  sliderAnimate(checkedB);
 })
 
 checkB.addEventListener("click",()=>{
   checkB.style.display="none";
   checkA.checked=false;
   document.getElementById("rangeTwo").value="0";
-  range.addEventListener("input",()=>{
-    if(range.value==100){
-      checkedC.style.visibility="visible";
-    }
-  })
-  sliderAnimate();
+
+  sliderAnimate(checkedC);
 })
 
 checkA.addEventListener("click",()=>{
   checkA.style.visibility="hidden";
   document.getElementById("rangeTwo").value="0";
-  range.addEventListener("input",()=>{
-    if(range.value==100){
-      checkedD.style.visibility="visible";
-    }
-  })
-  sliderAnimate();
+
+  sliderAnimate(checkedD);
 })
 
 // range.addEventListener("input",()=>{

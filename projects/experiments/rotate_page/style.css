@@ -1,0 +1,47 @@
+body{
+  background-color:yellow;
+  /* transform: rotate(60deg); */
+  transform-origin: center;
+  /* animation:spin 2s infinite;
+  animation-timing-function: linear; */
+}
+
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+    /* transform: translateX(0deg); */
+  }
+  to{
+    transform: rotate(360deg);
+    /* transform: translateX(70deg); */
+  }
+}
+
+.wrapper {
+  /* margin-left: 50px; */
+  color: white;
+  transform-origin: bottom left;
+  height: 100px;
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+  overflow: auto;
+  padding: 10px;
+}
+
+/* .wrapper:hover {
+  transition-duration: 0.3s;
+  transform: rotate(90deg);
+} */
+
+.spacerM {
+  display: block;
+  width: 100%;
+  clear: both;
+  height: 30px;
+}
+
+.correct {
+  transform-origin: center;
+  background: red;
+}

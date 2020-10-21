@@ -65,3 +65,6 @@
   margin-left: 80px;
   visibility: hidden;
 }
+#restart{
+  visibility: hidden;
+}

@@ -79,21 +79,6 @@ off.addEventListener("click", ()=>{
   gain.gain.value = 0;
 });
 
-
-// lastly we need to define what should happen when we use the sliders!
-volumeRange.addEventListener("input", ()=>{
-  gain.gain.value = volumeInput.value/100;
-})
-
-// frequencyRange.addEventListener("input", ()=>{
-//   // sliderValue = frequencyRange.value;
-//   // mappedHertz = map(sliderValue, 0, 100, minHz, maxHz);
-//   // console.log("mapped hertz is", mappedHertz)
-//   // oscillator.frequency.value = mappedHertz;
-//   // or, shorter:
-//   oscillator.frequency.value = map(frequencyRange.value, 100, 0, minHz, maxHz);
-// })
-
 //-----------------visual effect---------------------------
 let range=document.getElementById("rangeTwo");
 let start=document.getElementById("A");
@@ -107,6 +92,7 @@ let checkedA=document.getElementById("checkedA");
 let checkedB=document.getElementById("checkedB");
 let checkedC=document.getElementById("checkedC");
 let checkedD=document.getElementById("checkedD");
+let restart=document.getElementById("restart");
 
 //slider animation
 function sliderAnimate(after){
@@ -155,6 +141,11 @@ start.addEventListener("click",()=>{
   }
 })
 
+restart.addEventListener("click",()=>{
+start.style.visibility="visible";
+
+})
+
 //show checkboxes
 lineUp.addEventListener("click",()=>{
   document.getElementById("checkbox").style.visibility="visible";
@@ -191,7 +182,11 @@ checkA.addEventListener("click",()=>{
   document.getElementById("rangeTwo").value="0";
 
   sliderAnimate(checkedD);
+  setInterval(function(){
+    document.getElementById("restart").style.visibility="visible";
+  },1000);
 })
+
 
 // range.addEventListener("input",()=>{
 //   let value=range.value;

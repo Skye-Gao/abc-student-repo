@@ -1,5 +1,5 @@
 {
-    "name": "Replacer (with comments)",
+    "name": "Repeat",
     "version": "1.0",
     "description": "Replace words",
     "manifest_version": 2,
@@ -13,6 +13,7 @@
       }
     ],
     "browser_action": {
-      "default_icon": "tent.png"
+      "default_icon": "repeat.png"
+
     }
 }

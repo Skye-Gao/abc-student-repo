@@ -1,0 +1,21 @@
+{
+  "name": "Increase Popup Value",
+  "version": "1.0",
+  "description": "Replace words",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "tent.png",
+    "default_popup":"popup/popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "storage"
+  ]
+}

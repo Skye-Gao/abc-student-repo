@@ -1,0 +1,8 @@
+# Project B Prototype:
+
+
+Have you ever felt intimidated by the long, strange words appearing in your browser window? Have you ever wished that all the articles were just composed by words within your memory capacity? Inspired by the stressful process of memorizing and recognizing vocabulary, we’ve created this extension to “help” with people’s fear towards complicated vocabulary. This extension asks you to choose the length of the words you can tolerate in a webpage, and block all the other longer words. For example, when you open up Wikipedia and search for a definition, hundreds of words (including professional terminology) pops up and it is stressful to read through all of them. Well, fear no more! With our extension, you could type in the word with the number letters you could tolerate.
+
+Once you submit it to the extension, then the page will reorganize as only words with letters less than what you’ve input would appear in the text. It will also calculate the difference between the maximum letters in a word and the minimum and then map the difference with RGB value. In this way, words will also appear with a fade of color, where the words with the least letters will appear black, and the ones with the most would appear light-grey.
+
+This extention does not presume a certain browsing experience for the users. It can bring a little more humor and surprise to a web space, or may end up destroying the readability of the whole webpage. Afterall, it depends on the individual's ability and preference. The purpose is to insert a brake that interferes with the user's reading routines, and to challenge the fast reading habits on a digital platform, where individual elements of the digital content are often overlooked while fast-browsing.

@@ -1,0 +1,25 @@
+{
+  "name":"Care your eyes",
+  "version":"1.0",
+  "description": "choose the best screen color for browsing",
+  "manifest_version": 2,
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs"
+  ],
+  "content_scripts":[
+    {
+      "matches":["<all_urls>"],
+      "js":["contentscript.js"]
+    }
+  ],
+  "browser_action":{
+    "default_icon":"tent.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

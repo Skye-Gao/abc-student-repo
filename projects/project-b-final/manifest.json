@@ -1,7 +1,7 @@
 {
-  "name":"Care your eyes",
+  "name":"Project B",
   "version":"1.0",
-  "description": "choose the best screen color for browsing",
+  "description": "",
   "manifest_version": 2,
   "permissions": [
     "activeTab",
@@ -11,13 +11,12 @@
   ],
   "content_scripts":[
     {
-      "matches":["<all_urls>"],
-      "js":["axioslibrary.min.js", "contentscript.js"]
+      "matches":["https://www.cs.cmu.edu/~spok/grimmtmp/009.txt"],
+      "js":["findAndReplaceDOMText.js","axioslibrary.min.js", "contentscript.js"]
     }
   ],
   "browser_action":{
-    "default_icon":"tent.png",
-        "default_popup":"popup/index.html"
+    "default_icon":"a.png"
   },
   "background": {
     "scripts": ["background.js"],

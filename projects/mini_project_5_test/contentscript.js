@@ -39,3 +39,24 @@ function gotMessage(message,sender,sendresponse)
     div.style['background-color'] = '#f7ede2';
   }
 }
+
+// Make a request for a user with a given ID
+function getSimilarWord(inputWord, callback){
+  let url = "https://api.datamuse.com/words?sp="+inputWord
+  axios.get(url)
+    .then(function (response) {
+      // handle success
+      callback(response);
+      // return response
+    })
+    .catch(function (error) {
+      // handle error
+      callback(error);
+      // return error
+    })
+}
+
+
+getSimilarWord("elephant", (similarwords)=>{
+  console.log("hello", similarwords)
+});

@@ -69,19 +69,19 @@ function findWords(arra){
   }
 }
 findWords(replac);
+console.log(words);
+let replacer = [];
 
 function getSimilarWord(inputWord, callback){
   let url = "https://api.datamuse.com/words?sp="+inputWord
   axios.get(url)
   .then(function (response) {
-    let replacer = [];
-
     callback(response);
+    // console.log(response);
     for (let i = 0; i < response.data.length; i++){
       let wordobject = response.data[i];
       let newWord = wordobject.word;
       replacer.push(newWord);
-      // console.log(replacer);
     }
     if (Number(replacer.length) > Number(1)){
       let long = Number(replacer.length);
@@ -98,26 +98,42 @@ function getSimilarWord(inputWord, callback){
   })
 }
 
+console.log(replacer[0]);
+
 for (i=0;i<words.length;i++){
   getSimilarWord(words[i], (similarwords)=>{
   });
 }
 
-function changeWords(wordd,original){
-  var num = letters3.indexOf(String(original));
-  letters3[num]= String(wordd);
+// function changeWords(wordd,original){
+//   var num = letters3.indexOf(String(original));
+//   letters3[num]= String(wordd);
+//
+//   let joined2 = letters3.join(" ");
+//
+//   document.body.innerHTML = joined2;
+//
+//   // box.innerHTML = joined2;
+//   document.body.style.fontFamily = "sans-serif";
+//   document.body.style.color = "black";
+//   document.body.style.fontSize = "large";
+//   document.body.style.left = "200px";
+//   document.body.style.width = "60%";
+//   document.body.style.height = "100vh";
+//   contentElement.appendChild(box);
+//   // return letters2;
+// }
 
-  let joined2 = letters3.join(" ");
+function changeWords(find, replace){
 
-  document.body.innerHTML = joined2;
+  // comment out our initial, crude approach to finding and replacing text:
+  // var finder = new RegExp(find,"g");
+  // document.body.innerHTML = document.body.innerHTML.replace(finder, replace);
 
-  // box.innerHTML = joined2;
-  document.body.style.fontFamily = "sans-serif";
-  document.body.style.color = "black";
-  document.body.style.fontSize = "large";
-  document.body.style.left = "200px";
-  document.body.style.width = "60%";
-  document.body.style.height = "100vh";
-  contentElement.appendChild(box);
-  // return letters2;
+  // Here we use the library instead
+  // from: https://github.com/padolsey/findAndReplaceDOMText
+  findAndReplaceDOMText(document.body, {
+    find: find,
+    replace: replace
+  })
 }

@@ -2,7 +2,7 @@
 
 ## Intro:
 
-Words constitutes sentences; sentences constitues paragraphy. Sometimes it feels like playing an LEGO game when we look at the way a text is formed.
+Words constitutes sentences; sentences constitutes paragraphy. Sometimes it feels like playing an LEGO game when we look at the way a text is formed.
 
 As an English learner, when we encounter unfamiliar words while reading，we are always told to "guess the meaning of the words from context". It works in most canses, but it also makes us question: What does words means to us readers?
 Do you actually unserstand each word you read? How do we percive words and to what extent, does words matter to a language?

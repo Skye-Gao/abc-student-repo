@@ -1,8 +1,9 @@
 console.log("hello");
 const express = require('express') //get express from express_modules
 const app = express()
-const port = 3000
-const secret = "15";
+const port = process.env.PORT
+// const secret = "15";
+let answer=["be right back","Finding Nemo","love letter","movie clip","Norway","norway","finding nemo","Finding nemo"];
 
 app.use(express.static('public'))
 
@@ -13,12 +14,16 @@ app.use(express.static('public'))
 // })
 
 // // "/skye"route
-app.get('/secret', (request, response) => {
+app.get('/answer', (request, response) => {
 
   let query = request.query;
   let guess = query.word;
   console.log(query);
-  if (guess==secret){
+  console.log(answer.includes(guess));
+
+  let correct=answer.includes(guess);
+
+  if (correct==true){
     console.log("let them into the garden");
     response.redirect("/correct");
   }else{

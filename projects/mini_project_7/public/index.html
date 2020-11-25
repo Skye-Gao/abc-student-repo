@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+  <div id="elevator">
+    <h6 id="note"> Elevator capacity: 5 person </h6>
+    <h2 id="warning">⚠️ Elevator Overload ⚠️<br>Please reduce passenger capacity to less than 5 person</h2>
+
+    <div class="ppl" id="one">
+      <div class="message" id="mOne" style="top:10%"></div>
+      <img class="figure" src="images/1.png" alt="1">
+    </div>
+
+    <div class="ppl" id="two">
+      <div class="message" id="mTwo" style="top:-10%"></div>
+      <img class="figure" src="images/2.png" alt="1">
+    </div>
+
+    <div class="ppl" id="three">
+      <div class="message" id="mThree" style="top:-8%"></div>
+      <img class="figure" src="images/3.png" alt="1">
+    </div>
+
+    <div class="ppl" id="four">
+      <div class="message" id="mFour" style="top:5%"></div>
+      <img class="figure" src="images/4.png" alt="1">
+    </div>
+
+    <div class="ppl" id="five">
+      <div class="message" id="mFive" style="top:-20%"></div>
+      <img class="figure" src="images/5.png" alt="1">
+    </div>
+
+    <div class="ppl" id="floor">
+
+    </div>
+
+  </div>
+
+  <div id="say">
+    <p>What do you think: <input id="answer" type="text" name="" placeholder="?"></input> <button id="button" type="button" name="button">Submit</button></p>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

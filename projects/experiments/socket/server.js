@@ -1,6 +1,7 @@
-var app = require('express')();
-var http = require('http').createServer(app);
-var io = require('socket.io')(http);
+let express=require('express');
+let app = express();
+let http = require('http').createServer(app);
+let io = require('socket.io')(http);
 
 app.get('/', (req, res) => {
   //send direc messages

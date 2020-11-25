@@ -1,7 +1,7 @@
 console.log("hello");
 const express = require('express') //get express from express_modules
 const app = express()
-const port = 3000
+// const port = 3000
 // const secret = "15";
 let answer=["be right back","Finding Nemo","love letter","movie clip","Norway","norway","finding nemo","Finding nemo"];
 

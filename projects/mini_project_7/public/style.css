@@ -1,0 +1,73 @@
+body {
+}
+
+#elevator{
+  position: relative;
+  margin:auto;
+  width:60%;;
+  height:90vh;
+  border: 3px solid black;
+  /* transform: rotateY(-30deg); */
+}
+
+#note{
+  margin:5px;
+}
+
+#warning{
+  font-size: 18px;
+  font-family: cursive;
+  color: white;
+  animation: blink 1.5s linear infinite;
+  text-align: center;
+}
+
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity:1;}
+100%{opacity: 0;}
+}
+
+.ppl{
+  position: absolute;
+  /* background-color: blue; */
+  /* opacity: 0.5; */
+  bottom: 0;
+  width:20%;
+  height:70%;
+  /* border: 1px solid white; */
+  text-align: center;
+}
+
+#floor{
+
+  height:20%;
+  width: 100%;
+  border-top: 3px solid black;
+
+}
+.message{
+  /* visibility: hidden; */
+  z-index: 10;
+  color: white;
+  font-size: 25px;
+  background-color: transparent;
+  width:100%;
+  height:10%;
+  position: absolute;
+  top: -10%;
+  /* border: 3px solid green; */
+}
+
+.figure{
+  /* opacity: 0.8; */
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#say{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}

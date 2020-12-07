@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+
+  <div id="birth">
+    <div id="intro">
+      <p>"Welcome to the world, new born 👼! </p>
+      <p>Here you will live your life as a cursor ↖️. </p>
+      <p>Please enter your name and pronoun ⬇️."</p>
+      <br>
+      <p>Your name: <input id="name" type="text" name="" placeholder="Cursor Name"></input></p>
+      <p>Your pro-noun: <input id="pro_noun" type="text" name="" placeholder="He/She/It/They"></input> </p>
+      <br>
+      <button id="start" type="button" name="button">Start your life 👉</button>
+    </div>
+  </div>
+
+  <div id="life">
+    <div id="lifeIntro">
+      <p>How will a cursor live his/her/its life?</p>
+      <p>How will you spend your life?</p>
+      <p>After all, we are alone but together,</p>
+      <p>limited but all powerful,</p>
+      <p>racing with death while chasing lights.</p>
+      <br>
+      <p>Life is short.</p>
+      <p>Enjoy.</p>
+      <br>
+      <p id="countdown"><span id="clock"></span> years left to live</p>
+    </div>
+
+    <button id="button" type="button" name="button">click</button>
+    <input type="checkbox" id="check" name="vehicle" value="Bike">
+    <div id="cursorContainer">
+
+    </div>
+  </div>
+
+  <div id="transition">
+    <button id="goToGraveyard" type="button" name="button">go to graveyard</button>
+  </div>
+
+  <div id="graveyard">
+  </div>
+
+
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

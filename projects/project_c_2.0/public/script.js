@@ -12,6 +12,11 @@ let checkbox=document.getElementById("check");
 checkbox.style.position = "absolute";
 checkbox.style.left = 200 + 'px';
 checkbox.style.top = 320 + 'px';
+let colorPicker = document.getElementById("color");
+colorPicker.style.position = "absolute";
+colorPicker.style.left = 400 + 'px';
+colorPicker.style.top = 350 + 'px';
+
 
 let birth=document.getElementById("birth");
 let life=document.getElementById("life");
@@ -35,10 +40,15 @@ function freezeClicFn(e) {
 //show alive cursors
 function renderCursor(id,x,y){
   let cursor = document.createElement('div');
+  let cursorImg=document.createElement('img');
+  cursorImg.src="cursor.png";
+  cursorImg.style.height="23px"
+
   cursor.id = id+"-cursor";
   cursor.className="other_cursors";
   cursor.style.left=x+"px";
   cursor.style.top=y+"px";
+  cursor.appendChild(cursorImg);
   cursorContainer.appendChild(cursor);
 }
 
@@ -108,17 +118,20 @@ function newGrave(graveX,graveY){
   user_records.appendChild(recordsOne);
   user_records.appendChild(recordsTwo);
 
-  graveImg.addEventListener("mouseover", ()=>{
-    // document.body.style.backgroundColor = "blue";
-    recordsOne.innerHTML="This is your grave ⚰️."
-    recordsTwo.innerHTML=" Please rest in peace."
-  });
+  recordsOne.innerHTML="This is your grave ⚰️."
+  recordsTwo.innerHTML=" Please rest in peace."
 
-  graveImg.addEventListener("mouseout", ()=>{
-    // document.body.style.backgroundColor = "white";
-    recordsOne.innerHTML="";
-    recordsTwo.innerHTML="";
-  });
+  // graveImg.addEventListener("mouseover", ()=>{
+  //   // document.body.style.backgroundColor = "blue";
+  //   recordsOne.innerHTML="This is your grave ⚰️."
+  //   recordsTwo.innerHTML=" Please rest in peace."
+  // });
+  //
+  // graveImg.addEventListener("mouseout", ()=>{
+  //   // document.body.style.backgroundColor = "white";
+  //   recordsOne.innerHTML="";
+  //   recordsTwo.innerHTML="";
+  // });
 
 }
 
@@ -142,7 +155,7 @@ start.addEventListener("click", ()=>{
 
   //times up, send "dead" message, show "transition" div
   let lifetime = 0;
-  let totalYears = 10
+  let totalYears = 20;
   let lifeclock = setInterval(()=>{
     lifetime+=1;
     document.getElementById("clock").innerHTML = totalYears- lifetime;
@@ -158,15 +171,8 @@ start.addEventListener("click", ()=>{
         graveyard.style.display="block";
       })
     }
-  }, 1000)
+  }, 2000)
 });
-
-// //prompt listener to get user name
-// let name = prompt("Welcome to the world, new born! Here you will live your life a cursor. Please enter your name", "Cursor M");
-// if (name != null) {
-//   socket.emit('name',name);
-//   console.log(name);
-// }
 
 //event listenser for button/clicks etc.
 button.addEventListener("click", ()=>{
@@ -191,6 +197,19 @@ checkbox.addEventListener("click", ()=>{
   socket.emit('check', {message: msg, time: currentTime});
 });
 
+colorPicker.addEventListener("input", function() {
+  let msg="picked color " + colorPicker.value;
+
+  console.log(msg);
+
+  let today = new Date();
+  let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  let currentTime = date+' '+time;
+
+  socket.emit('pick_color', {message: msg, time: currentTime});
+}, false);
+
 //socket.on("burried_archive"): show all the exsitnig graves
 socket.on("burried-archive",(graves)=>{
   // console.log(id);
@@ -212,8 +231,8 @@ socket.on("burried-archive",(graves)=>{
 //event listener for picking grave position and send
 graveyard.addEventListener("click", ()=>{
   freezeClic = true;
-  let id="me";
-  // document.body.style.cursor = "none";
+  // document.body.style.cursor='url(cursor_dead.png), pointer';
+  document.body.style.cursor = "none";
   let cursorX=event.clientX;
   let cursorY=event.clientY;
   let actions="none";
@@ -240,6 +259,7 @@ life.addEventListener("mousemove", sendMousePosition);
 socket.on("others_alive",(alives)=>{
   cursorContainer.innerHTML='';
   let aliveIDs=Object.keys(alives);
+
   // console.log(aliveIDs);
   for (let i=0;i<aliveIDs.length;i++){
     let id=aliveIDs[i];
@@ -254,7 +274,6 @@ socket.on("others_alive",(alives)=>{
 socket.on("user_burried", (id,data)=>{
   console.log(id);
   console.log(data[id]);
-
   let newGraveX=data[id].gravePos.x;
   let newGraveY=data[id].gravePos.y;
   let actions=data[id].actions;

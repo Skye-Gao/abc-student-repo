@@ -66,6 +66,15 @@ io.on('connection', (socket) => {
     console.log('-------------------------------------');
   })
 
+  socket.on("pick_color", (data)=>{
+    cursorsAlive[id].actions.push(data);
+    // console.log(data)
+    console.log("cursors", cursorsAlive);
+    console.log("cursorsDead", cursorsDead);
+    console.log("cursorsBurried", cursorsBurried);
+    console.log('-------------------------------------');
+  })
+
   //receive live positions
   socket.on("live_pos", (data)=>{
     cursorsAlive[id].livePos = data;
@@ -120,7 +129,7 @@ let sendMovement=setInterval(()=>{
     io.to(id).emit("others_alive",cursorsAlive);
   }
 
-},50);
+},10);
 
 
 
